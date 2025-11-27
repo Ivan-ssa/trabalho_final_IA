@@ -1,0 +1,7 @@
+flask
+pandas
+langchain
+langchain-google-genai
+pydantic
+chromadb
+Flask-CORS  <--- ADICIONE ESTA LINHA
