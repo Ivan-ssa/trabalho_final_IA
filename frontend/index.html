@@ -3,18 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SBlock Chatbot IA</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>SBlock Seguros - Home</title> <link rel="stylesheet" href="style.css">
+    </head>
 <body>
-    <div class="chat-container">
-        <h1>SBlock - Atendimento 24/7 🤖</h1>
-        <div id="chat-box">
-            <div class="message bot">Olá! Sou o assistente da SBlock. Pergunte sobre seguros ou sinistros!</div>
+
+    <header class="sblock-header">
+        </header>
+
+    <main class="sblock-content">
+        </main>
+
+    <div class="chatbot-widget"> 
+        <div class="chat-container">
+            <div class="chat-header">
+                <h3>Atendimento SBlock 🤖</h3>
+            </div>
+            
+            <div id="chat-box">
+                <div class="message bot">Olá! Sou o assistente da SBlock. Pergunte sobre seguros ou sinistros!</div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Digite sua dúvida...">
+                <button onclick="sendMessage()">Enviar</button>
+            </div>
         </div>
-        <input type="text" id="user-input" placeholder="Digite sua pergunta...">
-        <button onclick="sendMessage()">Enviar</button>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
