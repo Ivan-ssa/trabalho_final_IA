@@ -1,7 +1,7 @@
 // /frontend/script.js
 
 // 🚨 CORREÇÃO: Usamos API_BASE_URL para o link do Codespaces (Porta 5000)
-const API_BASE_URL = 'https://solid-zebra-7v97v7jj9w9rhx7g4-5000.app.github.dev'; 
+const API_BASE_URL = 'http://localhost:5000'; 
 
 // A API_URL final aponta para a rota específica do Flask
 const API_URL = API_BASE_URL + '/api/chat';

@@ -4,4 +4,6 @@ langchain
 langchain-google-genai
 pydantic
 chromadb
-Flask-CORS  <--- ADICIONE ESTA LINHA
+Flask-CORS  
+langchain-community
+pypdf
