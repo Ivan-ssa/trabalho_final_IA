@@ -1,35 +1,452 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
+<html lang="pt-br"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SBlock Seguros - Home</title> <link rel="stylesheet" href="style.css">
-    </head>
-<body>
+    <title>SBlock - Segurança Digital para a Nova Geração</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Open+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./src/style.css">
 
-    <header class="sblock-header">
-        </header>
+<style>:is([id*='google_ads_iframe'],[id*='taboola-'],.taboolaHeight,.taboola-placeholder,#top-ad,#credential_picker_container,#credentials-picker-container,#credential_picker_iframe,[id*='google-one-tap-iframe'],#google-one-tap-popup-container,.google-one-tap__module,.google-one-tap-modal-div,#amp_floatingAdDiv,#ez-content-blocker-container) {display:none!important;min-height:0!important;height:0!important;}</style><script src="chrome-extension://liecbddmkiiihnedobmlmillhodjkdmb/js/recordConsoleEvents.js"></script></head>
+<body cz-shortcut-listen="true">
+    <!-- Header -->
+    <header id="header">
+        <div class="container header-container">
+            <div class="logo">
+                <img src="./src/sblock.png" alt="">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#seguros">Seguros</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-cta">
+                <a href="#cotacao" class="btn primary">Faça uma Cotação</a>
+            </div>
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar Tema">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
 
-    <main class="sblock-content">
-        </main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1>Segurança sem <span class="strike-through">burocracia</span></h1>
+                <h2>Proteção digital para o que realmente importa</h2>
+                <p>Seguros descomplicados para uma geração que valoriza tempo e simplicidade</p>
+                <div class="hero-buttons">
+                    <a href="#seguro-vida" class="btn primary">Seguro de Vida</a>
+                    <a href="#seguro-carro" class="btn secondary">Seguro de Carro</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://plus.unsplash.com/premium_photo-1661590863910-69abf33b8f3f?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Jovem profissional usando smartphone">
+                <div class="floating-lock lock-1">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="floating-lock lock-2">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="floating-lock lock-3">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <div class="chatbot-widget"> 
-        <div class="chat-container">
-            <div class="chat-header">
-                <h3>Atendimento SBlock 🤖</h3>
+    <!-- Why SBlock Section -->
+    <section class="why-sblock" id="sobre">
+        <div class="container">
+            <h2>Segurança com <span class="highlight">DNA digital</span></h2>
+            
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Zero Burocracia</h3>
+                    <p>Contratação 100% online em menos de 5 minutos</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Tudo no App</h3>
+                    <p>Gerencie sua apólice e solicite assistência com poucos toques</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3>IA BlockGuard</h3>
+                    <p>Assistente virtual disponível 24/7 para tirar suas dúvidas</p>
+                </div>
+                
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Personalização Total</h3>
+                    <p>Pague apenas pelo que realmente precisa</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Sections -->
+    <section id="seguro-vida" class="product">
+        <div class="container product-container">
+            <div class="product-content">
+                <span class="tag">VIDA</span>
+                <h2>Seguro de Vida <span class="highlight">Digital</span></h2>
+                <p>Proteção financeira para você e quem você ama, sem papelada e com coberturas que fazem sentido para sua vida.</p>
+                
+                <ul class="benefits">
+                    <li>Contratação 100% online</li>
+                    <li>Coberturas personalizáveis</li>
+                    <li>Assistência funeral digital</li>
+                    <li>Telemedicina inclusa</li>
+                    <li>Descontos em academias e apps de saúde</li>
+                </ul>
+                
+                <a href="#cotacao" class="btn primary">Faça sua cotação</a>
             </div>
             
-            <div id="chat-box">
-                <div class="message bot">Olá! Sou o assistente da SBlock. Pergunte sobre seguros ou sinistros!</div>
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80" alt="Seguro de Vida Digital">
+                <div class="security-badge">
+                    <i class="fas fa-lock"></i>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <div class="input-area">
-                <input type="text" id="user-input" placeholder="Digite sua dúvida...">
-                <button onclick="sendMessage()">Enviar</button>
+    <section id="seguro-carro" class="product reverse">
+        <div class="container product-container">
+            <div class="product-content">
+                <span class="tag">AUTO</span>
+                <h2>Seguro Auto <span class="highlight">Flex</span></h2>
+                <p>Proteção para seu veículo que se adapta ao seu estilo de vida. Pague menos se dirigir menos.</p>
+                
+                <ul class="benefits">
+                    <li>Preço baseado na sua quilometragem real</li>
+                    <li>Assistência 24h via app</li>
+                    <li>Guincho digital - acompanhe em tempo real</li>
+                    <li>Vistoria por selfie do veículo</li>
+                    <li>Cashback em postos parceiros</li>
+                </ul>
+                
+                <a href="#cotacao" class="btn primary">Faça sua cotação</a>
+            </div>
+            
+            <div class="product-image">
+                <img src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80" alt="Seguro Auto Flex">
+                <div class="security-badge">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials" id="seguros">
+        <div class="container">
+            <h2>O que dizem nossos <span class="highlight">clientes</span></h2>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="rating">★★★★★</div>
+                    <p>"Finalmente um seguro que não me faz perder horas ao telefone. Fiz tudo pelo app e quando precisei acionar, foi resolvido em minutos."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Cliente">
+                        <div>
+                            <h4>Marina Silva, 28</h4>
+                            <span>Designer</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="rating">★★★★★</div>
+                    <p>"O seguro auto flex é perfeito para mim que uso pouco o carro. Economizo muito comparado com as seguradoras tradicionais."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Cliente">
+                        <div>
+                            <h4>Rafael Costa, 31</h4>
+                            <span>Desenvolvedor</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="rating">★★★★★</div>
+                    <p>"A assistente virtual BlockGuard me ajudou a entender todas as coberturas e escolher o plano ideal. Muito mais fácil que falar com corretores."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Cliente">
+                        <div>
+                            <h4>Juliana Mendes, 26</h4>
+                            <span>Arquiteta</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="rating">★★★★★</div>
+                    <p>"Precisei acionar o seguro após um acidente e fiquei impressionado com a rapidez. Tudo resolvido pelo app, sem burocracia."</p>
+                    <div class="client">
+                        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Cliente">
+                        <div>
+                            <h4>Lucas Oliveira, 34</h4>
+                            <span>Médico</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- IA assistente -->
+    <section class="ai-assistant">
+        <div class="container ai-container">
+            <div class="ai-content">
+                <h2>Conheça a <span class="highlight">BlockGuard</span></h2>
+                <p>Nossa assistente virtual disponível 24/7 para tirar suas dúvidas, ajudar com sinistros e dar dicas de segurança.</p>
+                
+                <div class="chat-preview">
+                    <div class="chat-message ai">
+                        <span class="avatar">🔒</span>
+                        <div class="message">Olá! Sou a BlockGuard. Como posso ajudar você hoje?</div>
+                    </div>
+                    
+                    <div class="chat-message user">
+                        <div class="message">Como faço para acionar o guincho pelo app?</div>
+                        <span class="avatar">👤</span>
+                    </div>
+                    
+                    <div class="chat-message ai">
+                        <span class="avatar">🔒</span>
+                        <div class="message">É super simples! Abra o app SBlock, toque em "Assistência" e depois em "Guincho". Você pode acompanhar a chegada em tempo real!</div>
+                    </div>
+                </div>
+                
+                <a href="#" class="btn secondary" id="btn-fale-blockguard">Fale com a BlockGuard</a>
+            </div>
+            
+            <div class="ai-image">
+                <img src="https://cdn3d.iconscout.com/3d/premium/thumb/robot-assistant-5665777-4721946.png" alt="BlockGuard AI Assistant">
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="blockguard-modal" aria-hidden="true">
+        <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="blockguard-modal-title">
+            <button class="modal-close" id="close-blockguard-modal" aria-label="Fechar modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-chat">
+                <div class="modal-chat-header">
+                    <div class="modal-chat-header-info">
+                        <div class="modal-chat-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <span class="badge">Assistente virtual</span>
+                            <h3 id="blockguard-modal-title">BlockGuard IA</h3>
+                            <div class="modal-chat-status">
+                                <span class="status-dot"></span>
+                                <span>Online agora • resposta em segundos</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="chat-blockguard.html" class="modal-chat-expand">
+                        Tela cheia
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+                <div class="modal-chat-body" id="chat-box">
+                    <div class="message-row bot-row">
+                        <div class="message bot">
+                            Olá! Sou o assistente da SBlock. 🛡️<br>
+                            Posso ajudar com apólices, sinistros ou dúvidas gerais.
+                        </div>
+                        <span class="msg-time">Agora</span>
+                    </div>
+                </div>
+                <div class="modal-chat-input">
+                    <input type="text" id="user-input" placeholder="Digite sua dúvida aqui..." autocomplete="off">
+                    <button type="button" id="send-btn" aria-label="Enviar mensagem">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Quote Section -->
+    <section id="cotacao" class="quote-section">
+        <div class="container">
+            <div class="quote-container">
+                <h2>Proteja o que importa em <span class="highlight">minutos</span></h2>
+                <p>Sem burocracia, sem complicação. Apenas segurança digital para sua vida.</p>
+                
+                <form class="quote-form">
+                    <div class="form-tabs">
+                        <button type="button" class="tab active">Seguro de Vida</button>
+                        <button type="button" class="tab">Seguro Auto</button>
+                    </div>
+                    
+                    <div class="form-fields">
+                        <div class="form-group">
+                            <input type="text" placeholder="Nome completo" required="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="email" placeholder="E-mail" required="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <input type="tel" placeholder="Telefone" required="">
+                        </div>
+                        
+                        <div class="form-group">
+                            <select required="">
+                                <option value="" disabled="" selected="">Selecione sua idade</option>
+                                <option>18-25 anos</option>
+                                <option>26-35 anos</option>
+                                <option>36-45 anos</option>
+                                <option>46+ anos</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn primary full-width">Receber cotação</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Preview -->
+    <section class="blog-preview" id="blog">
+        <div class="container">
+            <h2>Dicas de <span class="highlight">segurança</span></h2>
+            
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80')"></div>
+                    <div class="blog-content">
+                        <span class="tag">VIDA</span>
+                        <h3>5 hábitos que podem reduzir seu prêmio de seguro</h3>
+                        <p>Descubra como pequenas mudanças no seu estilo de vida podem...</p>
+                        <a href="#" class="read-more">Ler mais</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=870&amp;q=80')"></div>
+                    <div class="blog-content">
+                        <span class="tag">AUTO</span>
+                        <h3>Como a tecnologia está transformando o seguro auto</h3>
+                        <p>A era dos apps e sensores que monitoram seu carro em tempo real...</p>
+                        <a href="#" class="read-more">Ler mais</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <div class="blog-image" style="background-image: url('https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=871&amp;q=80')"></div>
+                    <div class="blog-content">
+                        <span class="tag">DICAS</span>
+                        <h3>Seguro digital vs. tradicional: o que você precisa saber</h3>
+                        <p>Entenda as principais diferenças e por que a digitalização...</p>
+                        <a href="#" class="read-more">Ler mais</a>
+                    </div>
+                </article>
+            </div>
+            
+            <a href="#blog" class="btn secondary">Ver todos os artigos</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contato">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <div class="logo-text" style="color: white;">
+                        <img src="./src/branco.png" alt="SBlock Logo">
+                    </div>
+                    <p>Proteção digital para a nova geração</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Produtos</h4>
+                        <ul>
+                            <li><a href="#seguro-vida">Seguro de Vida</a></li>
+                            <li><a href="#seguro-carro">Seguro Auto</a></li>
+                            <li><a href="#">Combos</a></li>
+                            <li><a href="#">Para Empresas</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="#sobre">Sobre nós</a></li>
+                            <li><a href="#">Carreiras</a></li>
+                            <li><a href="#">Imprensa</a></li>
+                            <li><a href="#">Responsabilidade Social</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Suporte</h4>
+                        <ul>
+                            <li><a href="#">Central de Ajuda</a></li>
+                            <li><a href="#">Fale com a BlockGuard</a></li>
+                            <li><a href="#">Acionar Seguro</a></li>
+                            <li><a href="#">FAQ</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Redes Sociais</h4>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>© 2023 SBlock. Todos os direitos reservados.</p>
+                
+            </div>
+        </div>
+    </footer>
+
+    <!-- Flutuante Chat Button -->
+    <div class="chat-button">
+        <i class="fas fa-comment"></i>
+    </div>
+
+    
+
     <script src="script.js"></script>
+</body>
 </body>
 </html>
