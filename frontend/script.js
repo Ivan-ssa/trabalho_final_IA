@@ -11,8 +11,8 @@ function appendMessage(sender, message) {
     const chatBox = document.getElementById('chat-box');
     const msgDiv = document.createElement('div');
     msgDiv.className = `message ${sender}`;
-    // Permite quebra de linha no HTML
-    msgDiv.innerHTML = message.replace(/\n/g, '<br>'); 
+    //O { breaks: true } garante que o "enter" vire uma quebra de linha "<br>"
+    msgDiv.innerHTML = marked.parse(message, { breaks: true }); 
     chatBox.appendChild(msgDiv);
     chatBox.scrollTop = chatBox.scrollHeight; // Scroll automático
 }

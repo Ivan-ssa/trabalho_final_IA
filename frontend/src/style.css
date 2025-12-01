@@ -27,7 +27,10 @@
             --shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra mais forte */
             --gradient: linear-gradient(135deg, #1a2a44 0%, #2c5875 100%);
         }
-
+        /* Tradução: "Se o corpo estiver em Dark Mode, vá na seção hero e pinte o parágrafo de branco" */
+        body.dark-mode .hero-content p {
+            color: var(--text) !important;
+}
         /* Ajuste especial para o Header no modo escuro */
         body.dark-mode header {
             background-color: var(--white); /* Usa o cinza escuro */
@@ -1738,3 +1741,44 @@
                 font-size: 1.4rem;
             }
         }
+
+        /* --- CORREÇÃO DE ACESSIBILIDADE DARK MODE --- */
+/* Arruma o título "Conheça a" no Dark Mode */
+body.dark-mode .ai-content h2 {
+    color: var(--text); /* Vai pegar aquele branco #f0f0f0 */
+}
+/* 1. Arruma o texto descritivo "Nossa assistente virtual..." */
+body.dark-mode .ai-content p {
+    color: var(--text);
+    opacity: 0.9; /* Dica de Sênior: Diminui levemente o brilho pra não arder o olho */
+}
+
+/* Arruma a mensagem do USUÁRIO no Dark Mode */
+body.dark-mode .chat-message.user .message {
+    color: #ffffff; /* Texto Branco puro */
+    background-color: #334155; /* Sugestão: Um fundo azul/cinza para destacar que é o usuário, não o robô */
+    border: 1px solid #475569; /* Opcional: uma bordinha sutil ajuda a separar do fundo */
+}
+
+
+/* 2. (Opcional) Melhora a leitura dentro dos balões de chat no modo escuro */
+body.dark-mode .chat-message .message {
+    color: #333; /* Força o texto dentro do balão a ser escuro, já que o fundo do balão é claro */
+    font-weight: 500; /* Deixa a letra um pouquinho mais grossa pra ler melhor */
+}
+
+body.dark-mode .chat-message .message {
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Borda quase invisível */
+}
+
+/* Arruma o balão da IA (BlockGuard) no Dark Mode */
+body.dark-mode .chat-message.ai .message {
+    /* 1. O mais importante: Cor do texto clara */
+    color: #f1f5f9; 
+    
+    /* 2. Opcional: Clarear levemente o fundo do balão para destacar do fundo da página */
+    background-color: rgba(255, 255, 255, 0.1); 
+    
+    /* 3. Borda sutil para definição (a regra de ouro que falamos antes) */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
