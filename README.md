@@ -1,5 +1,10 @@
 # 🛡️ BlockGuard IA – Assistente Virtual SBlock
 
+<p alig="center">
+  <img src="./frontend/src/banner.png" alt="BlockGuard Banner" width="100%">
+</p>
+
+
 Solução de Inteligência Artificial Generativa (RAG) para atendimento automatizado de seguros, focada no público jovem e 100% digital.
 
 ---
