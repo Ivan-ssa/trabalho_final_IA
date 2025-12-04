@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SBlock Chatbot IA</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="./src/style.css">
+</head>
+<body class="chat-page">
+    <div class="background-icons">
+    <i class="fas fa-shield-alt icon-1"></i>
+    <i class="fas fa-lock icon-2"></i>
+    <i class="fas fa-robot icon-3"></i>
+    <i class="fas fa-fingerprint icon-4"></i>
+</div>
+
+    <div class="main-wrapper">
+        <div class="chat-card">
+            
+            <div class="chat-header">
+                <div class="header-info">
+                    <div class="bot-avatar">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div>
+                        <h1>BlockGuard IA</h1>
+                        <span class="status-dot"></span> <span class="status-text">Online agora</span>
+                    </div>
+                </div>
+                <button class="close-btn" id="close-full-chat" aria-label="Fechar e voltar">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <div id="chat-box">
+                <div class="message-row bot-row">
+                    <div class="message bot">
+                        Olá! Sou o assistente da SBlock. 🛡️<br>
+                        Posso ajudar com apólices, sinistros ou dúvidas gerais.
+                    </div>
+                    <span class="msg-time">Agora</span>
+                </div>
+            </div>
+
+            <div class="input-area">
+                <input type="text" id="user-input" placeholder="Digite sua dúvida aqui..." autocomplete="off">
+                <button onclick="sendMessage()" id="send-btn">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        const input = document.getElementById('user-input');
+        const sendBtn = document.getElementById('send-btn');
+        const closeFullChat = document.getElementById('close-full-chat');
+
+        if (input && sendBtn) {
+            input.addEventListener('keypress', function (event) {
+                if (event.key === 'Enter') {
+                    event.preventDefault();
+                    sendBtn.click();
+                }
+            });
+        }
+
+        if (closeFullChat) {
+            closeFullChat.addEventListener('click', () => {
+                if (window.history.length > 1) {
+                    window.history.back();
+                } else {
+                    window.location.href = 'index.html';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

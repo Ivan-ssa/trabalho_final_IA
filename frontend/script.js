@@ -1,5 +1,6 @@
 // /frontend/script.js
 
+
 // --- CONFIGURAÇÃO DA API ---
 // Aponta para o seu servidor no Render
 const API_BASE_URL = 'https://trabalho-final-ia.onrender.com';
