@@ -1,124 +1,149 @@
-# 🛡️ BlockGuard IA - Assistente Virtual SBlock
+# 🛡️ BlockGuard IA – Assistente Virtual SBlock
 
-> Solução de Inteligência Artificial Generativa (RAG) para atendimento automatizado de seguros, focada no público jovem e 100% digital.
-
-![Status](https://img.shields.io/badge/Status-Funcional-brightgreen) ![Python](https://img.shields.io/badge/Backend-Python%20Flask-blue) ![IA](https://img.shields.io/badge/IA-Google%20Gemini-orange)
-
-## 📋 Sobre o Projeto
-
-A **BlockGuard** é uma assistente virtual desenvolvida para a **SBlock Seguros**. Diferente de chatbots comuns, ela utiliza uma arquitetura híbrida:
-1.  **RAG (Retrieval-Augmented Generation):** Lê o PDF da apólice para responder dúvidas contratuais com precisão.
-2.  **Analytics (BI):** Processa dados históricos (CSV) para fornecer métricas financeiras e de risco em tempo real.
-
-### Principais Funcionalidades
-* 💬 **Chat Inteligente:** Respostas naturais via Google Gemini.
-* 🌑 **Dark Mode:** Interface acessível e confortável para uso noturno.
-* 📝 **Formatação Rica:** Suporte a Markdown (negrito, listas) para facilitar a leitura.
-* 📊 **Análise de Dados:** Consulta valores de franquia e histórico de sinistros.
+Solução de Inteligência Artificial Generativa (RAG) para atendimento automatizado de seguros, focada no público jovem e 100% digital.
 
 ---
 
-## 🚀 Como rodar o projeto localmente
+## 🔰 Tecnologias Utilizadas
 
-Siga o passo a passo abaixo para configurar o ambiente na sua máquina.
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Google Gemini](https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
+![RAG](https://img.shields.io/badge/RAG-Retrieval%20Augmented%20Generation-6A1B9A?style=for-the-badge)
+![Pandas](https://img.shields.io/badge/Pandas-Data%20Analytics-150458?style=for-the-badge&logo=pandas)
 
-### Pré-requisitos
-* **Python 3.10+** instalado.
-* **Git** instalado.
-* Uma chave de API do Google (Gemini).
+## 🗂️ Infra & Ferramentas
+![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![Vercel](https://img.shields.io/badge/Vercel-Deploy-000000?style=for-the-badge&logo=vercel)
+![VSCode](https://img.shields.io/badge/VSCode-Editor-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
-### 1. Clonar o Repositório
-Abra o terminal e rode:
-```bash
-git clone [https://github.com/seu-usuario/seu-repositorio.git](https://github.com/seu-usuario/seu-repositorio.git)
+## 📊 Processamento de Dados
+![CSV Processing](https://img.shields.io/badge/CSV-Analytics%20BI-FFB300?style=for-the-badge&logo=readdotcsv&logoColor=white)
+![PDF Parsing](https://img.shields.io/badge/PDF-RAG%20Parsing-E53935?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)
+
+## 🚀 Status do Projeto
+![Status](https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+---
+
+📋 Sobre o Projeto
+
+A BlockGuard é uma assistente virtual desenvolvida para a SBlock Seguros.
+Diferente de chatbots comuns, ela utiliza uma arquitetura híbrida:
+
+RAG (Retrieval-Augmented Generation): Lê PDFs da apólice para respostas contratuais precisas.
+
+Analytics (BI): Processa dados CSV para gerar métricas financeiras e de risco em tempo real.
+
+⭐ Principais Funcionalidades
+
+💬 Chat Inteligente usando Google Gemini
+
+🌑 Dark Mode moderno e confortável
+
+📝 Suporte a Markdown nas respostas
+
+📊 Análise de Dados (franquias, históricos de sinistros)
+
+📂 Leitura de PDFs com PyPDF
+
+🚀 Como rodar o projeto localmente
+✔️ Pré-requisitos
+
+Python 3.10+
+
+Git instalado
+
+Chave de API do Google Gemini
+
+📥 1. Clonar o Repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
 cd trabalho_final_IA
 
-2. Configurar o Backend (Python)
-⚠️ Importante: Não pule a etapa do Ambiente Virtual para evitar conflitos.
+⚙️ 2. Configurar o Backend (Python)
 
-Entre na pasta do backend:
+⚠️ Importante: Não pule a criação da venv para evitar conflitos!
 
-Bash
-
+Entrar no backend:
 cd backend
-Crie e ative o ambiente virtual:
 
-No Windows (Powershell/CMD):
-
-PowerShell
-
+Criar e ativar o ambiente virtual:
+Windows (PowerShell / CMD)
 python -m venv venv
 .\venv\Scripts\activate
-No Windows (Git Bash):
 
-Bash
-
+Windows (Git Bash)
 python -m venv venv
 source venv/Scripts/activate
-No Linux/Mac:
 
-Bash
-
+Linux / Mac
 python3 -m venv venv
 source venv/bin/activate
-Você saberá que funcionou quando aparecer (venv) no início da linha do terminal.
 
-Instale as dependências:
 
-Bash
+Você saberá que funcionou quando aparecer (venv) no início da linha.
 
+Instalar dependências
 pip install -r requirements.txt
-3. Configurar as Chaves de Acesso (.env)
-O projeto precisa de uma chave de API para funcionar.
 
-Crie um arquivo chamado .env dentro da pasta backend.
+🔐 3. Configurar a Chave de Acesso (.env)
 
-Adicione a seguinte linha dentro dele:
-
-Snippet de código
+Crie um arquivo chamado .env dentro da pasta backend e adicione:
 
 GEMINI_API_KEY=sua_chave_do_google_aqui
-Não tem uma chave? Gere gratuitamente em: Google AI Studio
 
-4. Rodar o Servidor
-Ainda no terminal do backend (com a venv ativa), inicie a aplicação:
 
-Bash
+Se ainda não tem uma chave → Google AI Studio.
 
+▶️ 4. Rodar o Servidor Backend
 python app.py
-O terminal deve exibir: Running on http://127.0.0.1:5000. Mantenha esse terminal aberto.
 
-5. Acessar o Frontend (Interface)
-Navegue até a pasta frontend do projeto.
 
-Abra o arquivo index.html no seu navegador preferido (Chrome, Edge, Firefox).
+Se tudo estiver OK, aparecerá:
 
-Pronto! A BlockGuard já pode ser utilizada.
+Running on http://127.0.0.1:5000
 
-🛠️ Tecnologias Utilizadas
-Backend: Python, Flask, LangChain, ChromaDB.
 
-IA: Google Gemini Pro (langchain-google-genai).
+Mantenha essa janela aberta.
 
-Processamento de Arquivos: PyPDF (Leitura de Apólices), Pandas (Análise de CSV).
+🖥️ 5. Acessar o Frontend
 
-Frontend: HTML5, CSS3 (Variáveis CSS, Flexbox), JavaScript Vanilla.
+Vá até a pasta frontend
 
-Bibliotecas JS: Marked.js (Renderização de Markdown).
+Abra o arquivo index.html no navegador (Chrome, Edge, Firefox)
+
+Pronto! 🎉
+A BlockGuard estará funcionando localmente.
+
+---
 
 🐛 Solução de Problemas Comuns
-Erro: ModuleNotFoundError
+❌ ModuleNotFoundError
 
-Causa: Você provavelmente não ativou a venv antes de instalar os requisitos.
+Causa: A venv não foi ativada antes do pip install.
+Solução:
 
-Solução: Delete a pasta venv, crie novamente, ative e rode o pip install.
+Apague a pasta venv
 
-Erro: Google API Key not found
+Crie novamente
 
-Causa: O arquivo .env não foi criado ou está com o nome errado.
+Ative
 
-Solução: Verifique se o arquivo se chama exatamente .env (sem .txt no final) e está na pasta backend.
+Rode pip install -r requirements.txt
+
+❌ Google API Key not found
+
+Causa: O .env está faltando ou com nome errado.
+Solução:
+
+Verifique se o nome é exatamente .env
+
+Confira se está na pasta backend
 
 👨‍💻 Autores
-André 
-Ivan 
+
+André
+
+Ivan
+
