@@ -7,3 +7,4 @@ chromadb
 Flask-CORS  
 langchain-community
 pypdf
+gunicorn
