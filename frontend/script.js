@@ -1,9 +1,9 @@
 // /frontend/script.js
 
-// 🚨 CORREÇÃO: Usamos API_BASE_URL para o link do Codespaces (Porta 5000)
-const API_BASE_URL = 'http://localhost:5000'; 
 
-// A API_URL final aponta para a rota específica do Flask
+// Esta é a ÚNICA ativa agora para deploy:
+const API_BASE_URL = 'https://trabalho-final-ia.onrender.com';
+
 const API_URL = API_BASE_URL + '/api/chat';
 
 
