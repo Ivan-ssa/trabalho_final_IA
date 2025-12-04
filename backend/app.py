@@ -25,7 +25,7 @@ CORS(app)
 # --- VARIÁVEIS GLOBAIS DE CONFIGURAÇÃO ---
 PDF_FILENAME = "./data/Manual Técnico de Dados - SBlock.pdf" 
 VECTOR_DB_PATH = "./sblock_db"
-LLM_MODEL = "gemini-2.5-flash"
+LLM_MODEL = "gemini-1.5-flash" # Ajustado para um modelo estavel, se o 2.5 falhar use este.
 
 # Variáveis globais para os componentes de IA/Dados
 METRICAS_SBLOCK = {}
@@ -200,7 +200,7 @@ def simular_cotacao(tipo_seguro: str, mensagem_usuario: str):
         f"E aí! Com base em nossos dados de **{data_ref}**, aqui estão as informações completas de custo e valor de sinistro:\n\n"
         f"💰 **CUSTO MENSAL (Prêmio Médio {tipo_seguro.replace('COTACAO_', '').upper()}):** R$ {premio_base:.2f}\n"
         f"🛡️ **VALOR MÉDIO HISTÓRICO DE SINISTRO (Payout):** {valor_sinistro_formatado}\n"
-        f"    *(Lembrete: O valor final da sua cobertura é customizável e você escolhe na hora da contratação.)*\n\n"
+        f"     *(Lembrete: O valor final da sua cobertura é customizável e você escolhe na hora da contratação.)*\n\n"
         f"{detalhe_risco}\n"
         f"👉 Você garante **{int(desconto_multi * 100)}% de desconto** se contratar ambos (Vida e Auto), levando o valor para **R$ {premio_final:.2f}**."
     )
@@ -310,6 +310,7 @@ def inicializar_aplicacao():
     EMBEDDINGS = GoogleGenerativeAIEmbeddings(model="text-embedding-004", google_api_key=API_KEY)
     
     # 2. INICIALIZAÇÃO DO LLM COM O SYSTEM PROMPT (PERSONA)
+    # 💡 CORREÇÃO: Trocamos para um modelo mais estável se o 2.5 não estiver acessível
     LLM_ROTEADOR = ChatGoogleGenerativeAI(model=LLM_MODEL, google_api_key=API_KEY, system_instruction=SBLOCK_PERSONA)
     LLM_RAG = ChatGoogleGenerativeAI(model=LLM_MODEL, google_api_key=API_KEY, system_instruction=SBLOCK_PERSONA)
     
@@ -322,13 +323,17 @@ def inicializar_aplicacao():
     print("🤖 Servidor de Chatbot IA pronto para uso!")
 
 
+# 🔥 CORREÇÃO CRÍTICA PARA O RENDER/GUNICORN 🔥
+# O Gunicorn importa o arquivo e NÃO roda o bloco "if main".
+# Por isso, precisamos chamar a inicialização aqui fora explicitamente.
+try:
+    print("🚀 Inicializando aplicação via Gunicorn/Render...")
+    inicializar_aplicacao()
+except Exception as e:
+    print(f"⚠️ Erro na inicialização global: {e}")
+
+
 if __name__ == '__main__':
-    try:
-        inicializar_aplicacao()
-        app.run(host='0.0.0.0', port=5000)
-    except FileNotFoundError as e:
-        print(f"\nERRO CRÍTICO: Arquivo nao encontrado! {e}")
-        print("Verifique se os arquivos CSV e o PDF estao na pasta /backend/data/.")
-    except Exception as e:
-        print(f"\nERRO CRÍTICO NA EXECUÇÃO: {e}")
-        print("Verifique se as dependencias (pypdf, Flask-CORS) estao instaladas e se a chave de API esta correta.")
+    # Este bloco só roda se você der "python app.py" no PC.
+    # No Render, ele é ignorado, mas como chamamos a função acima, tudo funciona!
+    app.run(host='0.0.0.0', port=5000)
