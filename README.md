@@ -11,24 +11,22 @@ Solução de Inteligência Artificial Generativa (RAG) para atendimento automati
 
 ## 🔰 Tecnologias Utilizadas
 
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?style=for-the-badge&logo=fastapi&logoColor=white)
-![Google Gemini](https://img.shields.io/badge/Google%20Gemini-AI-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![RAG](https://img.shields.io/badge/RAG-Retrieval%20Augmented%20Generation-6A1B9A?style=for-the-badge)
-![Pandas](https://img.shields.io/badge/Pandas-Data%20Analytics-150458?style=for-the-badge&logo=pandas)
+![Python](https://img.shields.io/badge/Python-3.10-blue?logo=python)
+![Flask](https://img.shields.io/badge/Flask-API-black?logo=flask)
+![LangChain](https://img.shields.io/badge/LangChain-RAG-green)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-VectorDB-purple)
+![Gemini](https://img.shields.io/badge/Google%20Gemini-AI-blue?logo=google)
+![HTML5](https://img.shields.io/badge/HTML5-Frontend-orange?logo=html5)
+![CSS3](https://img.shields.io/badge/CSS3-UI-blue?logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-ES6-yellow?logo=javascript)
+
 
 ## 🗂️ Infra & Ferramentas
-![Docker](https://img.shields.io/badge/Docker-Containerized-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![Vercel](https://img.shields.io/badge/Vercel-Deploy-000000?style=for-the-badge&logo=vercel)
 ![VSCode](https://img.shields.io/badge/VSCode-Editor-007ACC?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 ## 📊 Processamento de Dados
 ![CSV Processing](https://img.shields.io/badge/CSV-Analytics%20BI-FFB300?style=for-the-badge&logo=readdotcsv&logoColor=white)
 ![PDF Parsing](https://img.shields.io/badge/PDF-RAG%20Parsing-E53935?style=for-the-badge&logo=adobeacrobatreader&logoColor=white)
-
-## 🚀 Status do Projeto
-![Status](https://img.shields.io/badge/Status-In%20Development-yellow?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
 
 ---
 
